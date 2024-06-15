@@ -17,11 +17,11 @@ using System.Windows.Shapes;
 namespace ArcGPT
 {
     /// <summary>
-    /// Interaction logic for Dockpane1View.xaml
+    /// Interaction logic for ChatGPTView.xaml
     /// </summary>
-    public partial class Dockpane1View : UserControl
+    public partial class ChatGPTView : UserControl
     {
-        public Dockpane1View()
+        public ChatGPTView()
         {
             InitializeComponent();
         }

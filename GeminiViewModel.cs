@@ -20,14 +20,14 @@ using System.Threading.Tasks;
 
 namespace ArcGPT
 {
-    internal class Dockpane2ViewModel : DockPane
+    internal class GeminiViewModel : DockPane
     {
-        private const string _dockPaneID = "ArcGPT_Dockpane2";
+        private const string _dockPaneID = "ArcGPT_Gemini";
         private const string StartUri = "https://gemini.google.com/app";
         private Uri _sourceUri = new(StartUri);
         private string _navInput = StartUri;
 
-        protected Dockpane2ViewModel() { }
+        protected GeminiViewModel() { }
 
         /// <summary>
         /// Show the DockPane.
@@ -44,7 +44,7 @@ namespace ArcGPT
         /// <summary>
         /// Text shown near the top of the DockPane.
         /// </summary>
-        private string _heading = "Bard";
+        private string _heading = "Gemini";
         public string Heading
         {
             get => _heading;
@@ -75,11 +75,11 @@ namespace ArcGPT
     /// <summary>
     /// Button implementation to show the DockPane.
     /// </summary>
-    internal class Dockpane2_ShowButton : Button
+    internal class Gemini_ShowButton : Button
     {
         protected override void OnClick()
         {
-            Dockpane2ViewModel.Show();
+            GeminiViewModel.Show();
         }
     }
 }

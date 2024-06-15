@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="ArcGPT.Dockpane1View"
+﻿<UserControl x:Class="ArcGPT.ChatGPTView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -9,7 +9,7 @@
              xmlns:fwk="clr-namespace:ArcGIS.Desktop.Framework.Controls;assembly=ArcGIS.Desktop.Framework"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300"
-             d:DataContext="{Binding Path=ui.Dockpane1ViewModel}">
+             d:DataContext="{Binding Path=ui.ChatGPTViewModel}">
   <UserControl.Resources>
     <ResourceDictionary>
       <ResourceDictionary.MergedDictionaries>
@@ -32,7 +32,7 @@
       </TextBlock>
     </DockPanel>
         <Grid Grid.Row="1">
-            <Border BorderBrush="Red" BorderThickness="2,2">
+            <Border BorderBrush="BlueViolet" BorderThickness="2,2">
                 <fwk:WebViewBrowser Source="{Binding SourceUri, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
             </Border>
         </Grid>

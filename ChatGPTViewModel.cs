@@ -20,14 +20,14 @@ using System.Threading.Tasks;
 
 namespace ArcGPT
 {
-    internal class Dockpane1ViewModel : DockPane
+    internal class ChatGPTViewModel : DockPane
     {
-        private const string _dockPaneID = "ArcGPT_Dockpane1";
+        private const string _dockPaneID = "ArcGPT_ChatGPT";
         private const string StartUri = "https://chat.openai.com";
         private Uri _sourceUri = new(StartUri);
         private string _navInput = StartUri;
 
-        protected Dockpane1ViewModel() { }
+        protected ChatGPTViewModel() { }
 
         /// <summary>
         /// Show the DockPane.
@@ -75,11 +75,11 @@ namespace ArcGPT
     /// <summary>
     /// Button implementation to show the DockPane.
     /// </summary>
-    internal class Dockpane1_ShowButton : Button
+    internal class ChatGPT_ShowButton : Button
     {
         protected override void OnClick()
         {
-            Dockpane1ViewModel.Show();
+            ChatGPTViewModel.Show();
         }
     }
 }

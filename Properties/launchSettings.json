@@ -2,7 +2,7 @@
   "profiles": {
     "ArcGPT": {
       "commandName": "Executable",
-      "executablePath": "C:\\ArcGIS\\ArcGISPro\\bin\\ArcGISPro.exe"
+      "executablePath": "C:\\Program Files\\ArcGIS\\Pro\\bin\\ArcGISPro.exe"
     }
   }
 }

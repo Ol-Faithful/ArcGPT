@@ -1,4 +1,5 @@
-﻿<ArcGIS defaultAssembly="ArcGPT.dll" defaultNamespace="ArcGPT" xmlns="http://schemas.esri.com/DADF/Registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///C:/ArcGIS/ArcGISPro/bin/ArcGIS.Desktop.Framework.xsd">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArcGIS defaultAssembly="ArcGPT.dll" defaultNamespace="ArcGPT" xmlns="http://schemas.esri.com/DADF/Registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///C:/Program%20Files/ArcGIS/Pro/bin/ArcGIS.Desktop.Framework.xsd">
   <AddInInfo id="{47d815dc-a738-44f2-b765-1c4b8309c92a}" version="1.0" desktopVersion="3.3.52636" product="ArcGISPro">
     <Name>ArcGPT</Name>
     <Description>ArcGPT description</Description>
@@ -23,32 +24,39 @@
               an empty group-->
         <group id="ArcGPT_Group1" caption="Chat" appearsOnAddInTab="true">
           <!-- host controls within groups -->
-          <button refID="ArcGPT_Dockpane1_ShowButton" size="large" />
-          <button refID="ArcGPT_Dockpane2_ShowButton" size="large" />
-          <button refID="ArcGPT_CoPilot_ShowButton" size="large" />
+          <button refID="ArcGPT_ChatGPT_ShowButton" size="large" />
+          <button refID="ArcGPT_Gemini_ShowButton" size="small" />
+          <button refID="ArcGPT_CoPilot_ShowButton" size="small" />
+          <button refID="ArcGPT_MetaAI_ShowButton" size="small" />
         </group>
       </groups>
       <controls>
         <!-- add your controls here -->
-        <button id="ArcGPT_Dockpane1_ShowButton" caption="Open ChatGPT" className="Dockpane1_ShowButton" loadOnClick="true" smallImage="GenericButtonPurple16" largeImage="GenericButtonPurple32">
-          <tooltip heading="Show Dockpane">Show Dockpane<disabledText /></tooltip>
+        <button id="ArcGPT_ChatGPT_ShowButton" caption="Open ChatGPT" className="ChatGPT_ShowButton" loadOnClick="true" smallImage="GenericButtonPurple16" largeImage="GenericButtonPurple32">
+          <tooltip heading="Chat Gpt">Show Dockpane<disabledText /></tooltip>
         </button>
-        <button id="ArcGPT_Dockpane2_ShowButton" caption="Open Gemini" className="Dockpane2_ShowButton" loadOnClick="true" smallImage="GenericButtonPurple16" largeImage="GenericButtonPurple32">
-          <tooltip heading="Show Dockpane">Show Dockpane<disabledText /></tooltip>
+        <button id="ArcGPT_Gemini_ShowButton" caption="Open Gemini" className="Gemini_ShowButton" loadOnClick="true" smallImage="GenericButtonPurple16" largeImage="GenericButtonPurple32">
+          <tooltip heading="Gemini">Show Dockpane<disabledText /></tooltip>
         </button>
         <button id="ArcGPT_CoPilot_ShowButton" caption="Open CoPilot" className="CoPilot_ShowButton" loadOnClick="true" smallImage="GenericButtonPurple16" largeImage="GenericButtonPurple32">
-          <tooltip heading="Show Dockpane">Show Dockpane<disabledText /></tooltip>
+          <tooltip heading="Co Pilot">Show Dockpane<disabledText /></tooltip>
+        </button>
+        <button id="ArcGPT_MetaAI_ShowButton" caption="Show MetaAI" className="MetaAI_ShowButton" loadOnClick="true" smallImage="GenericButtonPurple16" largeImage="GenericButtonPurple32">
+          <tooltip heading="Meta AI">Show Dockpane<disabledText /></tooltip>
         </button>
       </controls>
       <dockPanes>
-        <dockPane id="ArcGPT_Dockpane1" caption="Chat GPT" className="Dockpane1ViewModel" dock="group" dockWith="esri_core_projectDockPane">
-          <content className="Dockpane1View" />
+        <dockPane id="ArcGPT_ChatGPT" caption="Chat GPT" className="ChatGPTViewModel" dock="group" dockWith="esri_core_projectDockPane">
+          <content className="ChatGPTView" />
         </dockPane>
-        <dockPane id="ArcGPT_Dockpane2" caption="Bard" className="Dockpane2ViewModel" dock="group" dockWith="esri_core_projectDockPane">
-          <content className="Dockpane2View" />
+        <dockPane id="ArcGPT_Gemini" caption="Gemini" className="GeminiViewModel" dock="group" dockWith="esri_core_projectDockPane">
+          <content className="GeminiView" />
         </dockPane>
         <dockPane id="ArcGPT_CoPilot" caption="CoPilot" className="CoPilotViewModel" dock="group" dockWith="esri_core_projectDockPane">
           <content className="CoPilotView" />
+        </dockPane>
+        <dockPane id="ArcGPT_MetaAI" caption="MetaAI" className="MetaAIViewModel" dock="group" dockWith="esri_core_projectDockPane">
+          <content className="MetaAIView" />
         </dockPane>
       </dockPanes>
     </insertModule>

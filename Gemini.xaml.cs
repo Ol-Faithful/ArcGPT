@@ -17,11 +17,11 @@ using System.Windows.Shapes;
 namespace ArcGPT
 {
     /// <summary>
-    /// Interaction logic for Dockpane2View.xaml
+    /// Interaction logic for GeminiView.xaml
     /// </summary>
-    public partial class Dockpane2View : UserControl
+    public partial class GeminiView : UserControl
     {
-        public Dockpane2View()
+        public GeminiView()
         {
             InitializeComponent();
         }
